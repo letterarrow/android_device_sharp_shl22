@@ -1,0 +1,19 @@
+# Android fstab file.
+#<src>                                         <mnt_point>  <type>  <mnt_flags and options>  <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                                 wait
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic     wait,check
+/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic     wait,check
+/dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    noatime,nosuid,nodev,barrier=1,data=ordered                                  wait
+/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    ro,noatime,uid=1000,gid=1000,fmask=0337,dmask=0227,errors=remount-ro         default
+/dev/block/platform/msm_sdcc.1/by-name/fotadata     /fota           vfat    rw,noatime,uid=4011,gid=4011,fmask=0007,dmask=0007,errors=remount-ro         default
+/dev/block/platform/msm_sdcc.1/by-name/durable      /durable        ext4    rw,nosuid,nodev,noatime,data=ordered                                         default
+/dev/block/platform/msm_sdcc.1/by-name/calllog      /calllog        ext4    rw,nosuid,nodev,noatime,data=ordered                                         default
+/dev/block/platform/msm_sdcc.1/by-name/dmac         /dmac           ext4    rw,nosuid,nodev,noatime,data=ordered                                         default
+/dev/block/platform/msm_sdcc.1/by-name/internal     /internal_sd    ext4    rw,nosuid,nodev,noatime,data=ordered,noauto_da_alloc                         default
+/dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot          emmc    default                                                                      default
+/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    default                                                                      default
+/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    default                                                                      default
+/dev/block/platform/mmcblk1p1                       /external_sd    exfat   noatime                                                                      default

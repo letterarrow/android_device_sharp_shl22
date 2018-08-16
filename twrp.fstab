@@ -1,0 +1,15 @@
+/system         ext4    /dev/block/platform/msm_sdcc.1/by-name/system
+/data           ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata
+/cache          ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
+/persist        ext4    /dev/block/platform/msm_sdcc.1/by-name/persist
+/firmware       vfat    /dev/block/platform/msm_sdcc.1/by-name/modem
+/fota           vfat    /dev/block/platform/msm_sdcc.1/by-name/fotadata
+/durable        ext4    /dev/block/platform/msm_sdcc.1/by-name/durable
+/calllog        ext4    /dev/block/platform/msm_sdcc.1/by-name/calllog
+/dmac           ext4    /dev/block/platform/msm_sdcc.1/by-name/dmac
+/internal_sd    ext4    /dev/block/platform/msm_sdcc.1/by-name/internal
+/aboot          emmc    /dev/block/platform/msm_sdcc.1/by-name/aboot
+/boot           emmc    /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery       emmc    /dev/block/platform/msm_sdcc.1/by-name/recovery
+/external_sd    exfat   /dev/block/platform/mmcblk1p1
+
